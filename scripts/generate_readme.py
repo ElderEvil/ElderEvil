@@ -67,23 +67,21 @@ def fetch_github_repos():
 
 
 def build_repos_section(repos):
-    top = [r for r in repos if not r.get("fork") and r.get("stargazers_count", 0) > 0][:6]
+    top = [r for r in repos if not r.get("fork") and r.get("stargazers_count", 0) > 0][:5]
     if not top:
         return ""
 
     lines = [
         "## Popular Repositories",
         "",
-        '<div align="center">',
     ]
     for repo in top:
         name = repo.get("name", "")
-        lines.append(
-            f'<a href="https://github.com/{GITHUB_USER}/{name}">'
-            f'<img src="https://github-readme-stats.vercel.app/api/pin/?username={GITHUB_USER}&repo={name}&theme=github_dark&hide_border=true" '
-            f'alt="{name}" /></a>'
-        )
-    lines.append("</div>")
+        desc = repo.get("description") or ""
+        stars = repo.get("stargazers_count", 0)
+        lang = repo.get("language") or ""
+        lang_tag = f" ![{lang}](https://img.shields.io/badge/{lang}-lightgrey?style=flat&logo=github)" if lang else ""
+        lines.append(f"- [{name}](https://github.com/{GITHUB_USER}/{name}) — {desc} ⭐{stars}{lang_tag}")
     lines.append("")
     return "\n".join(lines)
 
@@ -93,9 +91,10 @@ def build_stats_section():
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={GITHUB_USER}&theme=github_dark" alt="Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={GITHUB_USER}&theme=github_dark" alt="Languages by Repo" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username={GITHUB_USER}&theme=github_dark" alt="Languages by Commit" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={GITHUB_USER}&theme=github_dark" alt="Profile Details" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={GITHUB_USER}&theme=github_dark" alt="Contribution Graph" />
 </div>
 
 <div align="center">

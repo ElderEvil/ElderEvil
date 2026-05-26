@@ -28,9 +28,10 @@ site: https://evillab.tech
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ElderEvil&theme=github_dark" alt="Languages by Repo" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ElderEvil&theme=github_dark" alt="Languages by Commit" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Profile Details" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Contribution Graph" />
 </div>
 
 <div align="center">
@@ -40,9 +41,7 @@ site: https://evillab.tech
 
 ## Popular Repositories
 
-<div align="center">
-<a href="https://github.com/ElderEvil/fastapi-quickstart"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ElderEvil&repo=fastapi-quickstart&theme=github_dark&hide_border=true" alt="fastapi-quickstart" /></a>
-</div>
+- [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
 
 
 ---
@@ -54,5 +53,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-05-26 20:37 UTC</sub>
+  <sub>Last updated: 2026-05-26 20:42 UTC</sub>
 </div>
