@@ -1,57 +1,66 @@
-<div align="center">
-  <a href="https://evillab.tech">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Elder.Evil;Python+Developer;FastAPI+%26+Pytest+Learner;Homelab+Enthusiast;blog.evillab.tech" alt="Typing SVG" />
-  </a>
-  <br/>
-  <a href="https://evillab.tech"><sup>evillab.tech</sup></a>
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-</div>
+# Elder.Evil
 
+> Python developer building backend tools, homelab experiments, and small
+> automation systems from Kharkiv, Ukraine.
 
+I like clean APIs, reproducible setups, self-hosted services, and projects that
+start as “just a small script” and somehow become infrastructure.
 
 ```yaml
 location: Kharkiv, Ukraine
-timezone: UTC+3
-learning: FastAPI, Pytest, Wagtail
-interests: Python, self-hosting, homelab, k3s, automation
-site: https://evillab.tech
+timezone: Europe/Kyiv
+focus:
+  - Python backend development
+  - FastAPI and testing
+  - self-hosting and homelab automation
+  - k3s, Docker, Linux
+currently_learning:
+  - FastAPI internals
+  - Pytest patterns
+  - Wagtail
+home_base: https://evillab.tech
 ```
 
+## Lab Bench
 
-## GitHub Analytics
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/k3s%20%2F%20Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
-</div>
+## Current Experiments
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Contribution Graph" />
-</div>
+- Building reusable FastAPI project templates and tooling.
+- Improving test coverage with Pytest.
+- Running self-hosted services in a homelab environment.
+- Writing notes and experiments at [evillab.tech](https://evillab.tech).
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
-</div>
+## Featured Project
 
+### [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart)
 
-## Popular Repositories
+A small package for bootstrapping FastAPI projects faster, with less repetitive
+setup work.
 
-- [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
+`Python` · `FastAPI` · `Project templates` · `Developer tooling`
 
+## GitHub Snapshot
+
+![GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark)
+
+<details>
+<summary>More GitHub analytics</summary>
+
+![Profile details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark)
+
+![GitHub streak](https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true)
+
+![Activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ElderEvil&theme=github-dark&hide_border=true&area=true)
+
+</details>
 
 ---
 
-<details>
-<summary><b>Activity Graph</b></summary>
-<br/>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ElderEvil&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" />
-</details>
-
-<div align="center">
-  <sub>Last updated: 2026-05-26 21:05 UTC</sub>
-</div>
+`Python developer` · `Homelab tinkerer` · `Self-hosting enjoyer` · `FastAPI learner`
