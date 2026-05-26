@@ -1,9 +1,52 @@
-- 👋 Hi, I’m @ElderEvil
-- 👀 I’m interested in Python projects of any sort
-- 🌱 I’m currently learning Pytest and FastAPI
-- 📫 You can email me to lordofelderevil@gmail.com
+<div align="center">
+  <a href="https://evillab.tech">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Elder.Evil;Python+Developer;FastAPI+%26+Pytest+Learner;Homelab+Enthusiast;blog.evillab.tech" alt="Typing SVG" />
+  </a>
+  <br/>
+  <a href="https://evillab.tech"><sup>evillab.tech</sup></a>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+</div>
 
-<!---
-ElderEvil/ElderEvil is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+```yaml
+location: Kharkiv, Ukraine
+timezone: UTC+3
+learning: FastAPI, Pytest, Wagtail
+interests: Python, self-hosting, homelab, k3s, automation
+site: https://evillab.tech
+```
+
+
+## GitHub Analytics
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ElderEvil&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ElderEvil&layout=compact&theme=github_dark&hide_border=true&langs_count=8" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=ElderEvil&theme=onedark&no-frame=true&row=1&column=6" alt="GitHub Trophies" />
+</div>
+
+
+---
+
+<details>
+<summary><b>Activity Graph</b></summary>
+<br/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ElderEvil&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" />
+</details>
+
+<div align="center">
+  <sub>Last updated: 2026-05-26 23:30 UTC</sub>
+</div>
