@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 import json
+import random
 import urllib.request
 import urllib.error
 import datetime
@@ -12,31 +13,38 @@ from pathlib import Path
 GITHUB_USER = "ElderEvil"
 README_PATH = Path(__file__).resolve().parent.parent / "README.md"
 
-HEADER = """<div align="center">
-  <a href="https://evillab.tech">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Elder.Evil;Python+Developer;FastAPI+%26+Pytest+Learner;Homelab+Enthusiast;blog.evillab.tech" alt="Typing SVG" />
-  </a>
-  <br/>
-  <a href="https://evillab.tech"><sup>evillab.tech</sup></a>
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-</div>
-"""
+MATRIX_CHARS = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF"
+MATRIX_COLORS = ["#ff0000", "#cc0000", "#990000", "#ff3333", "#ff6666"]
 
-ABOUT_SECTION = """
-```yaml
-location: Kharkiv, Ukraine
-timezone: UTC+3
-learning: FastAPI, Pytest, Wagtail
-interests: Python, self-hosting, homelab, k3s, automation
-site: https://evillab.tech
-```
-"""
+
+def build_matrix_rain():
+    rng = random.Random(42)
+    count = 35
+    width = 800
+    height = 80
+    drops = []
+
+    for i in range(count):
+        x = rng.randint(10, width - 10)
+        ch = rng.choice(MATRIX_CHARS)
+        dur = round(rng.uniform(2.0, 4.5), 1)
+        delay = round(rng.uniform(0, 5.0), 1)
+        is_head = rng.random() < 0.25
+        color = "#ff2222" if is_head else rng.choice(MATRIX_COLORS)
+        weight = "bold" if is_head else "normal"
+        start_y = rng.randint(-height - 20, -5)
+        drops.append(
+            f'<text x="{x}" y="{start_y}" fill="{color}"'
+            f' font-weight="{weight}" font-size="13" font-family="monospace">'
+            f'<animate attributeName="y" values="{start_y};{height + 20}"'
+            f' dur="{dur}s" begin="{delay}s" repeatCount="indefinite"/>'
+            f'{ch}</text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <rect width="{width}" height="{height}" fill="#0d1117"/>
+  {"".join(drops)}
+</svg>"""
 
 
 def fetch_json(url: str, token: str | None = None) -> dict | list | None:
@@ -66,68 +74,100 @@ def fetch_github_repos():
     return data
 
 
-def build_repos_section(repos):
-    top = [r for r in repos if not r.get("fork") and r.get("stargazers_count", 0) > 0][:5]
-    if not top:
-        return ""
+def fetch_user_stats():
+    token = os.environ.get("GITHUB_TOKEN")
+    user_url = f"https://api.github.com/users/{GITHUB_USER}"
+    user = fetch_json(user_url, token=token)
+    if not isinstance(user, dict):
+        return {}
 
-    lines = [
-        "## Popular Repositories",
-        "",
-    ]
-    for repo in top:
-        name = repo.get("name", "")
-        desc = repo.get("description") or ""
-        stars = repo.get("stargazers_count", 0)
-        lang = repo.get("language") or ""
-        lang_tag = f" ![{lang}](https://img.shields.io/badge/{lang}-lightgrey?style=flat&logo=github)" if lang else ""
-        lines.append(f"- [{name}](https://github.com/{GITHUB_USER}/{name}) — {desc} ⭐{stars}{lang_tag}")
-    lines.append("")
-    return "\n".join(lines)
+    pr_count = 0
+    issue_count = 0
+    if token:
+        pr_data = fetch_json(
+            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:pr&per_page=1",
+            token=token,
+        )
+        if isinstance(pr_data, dict):
+            pr_count = pr_data.get("total_count", 0)
+
+        issue_data = fetch_json(
+            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:issue&per_page=1",
+            token=token,
+        )
+        if isinstance(issue_data, dict):
+            issue_count = issue_data.get("total_count", 0)
+
+    return {
+        "public_repos": user.get("public_repos", 0),
+        "followers": user.get("followers", 0),
+        "following": user.get("following", 0),
+        "created_at": user.get("created_at", ""),
+        "pr_count": pr_count,
+        "issue_count": issue_count,
+    }
 
 
-def build_stats_section():
-    return f"""## GitHub Analytics
+def build_terminal_section(stats: dict):
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M")
+    years_active = ""
+    if stats.get("created_at"):
+        joined = datetime.datetime.fromisoformat(stats["created_at"].replace("Z", "+00:00"))
+        years_active = str((datetime.datetime.now(datetime.timezone.utc) - joined).days // 365)
 
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={GITHUB_USER}&theme=github_dark" alt="Stats" />
-</div>
+    repos = stats.get("public_repos", "?")
+    prs = stats.get("pr_count", "?")
+    issues = stats.get("issue_count", "?")
+    followers = stats.get("followers", "?")
+    since = years_active or "?"
+    return f"""\x60\x60\x60
+╭──────────────────────────────────────────────────────╮
+│  ELDEREVIL@evillab.tech                    {now[:10]}  │
+├──────────────────────────────────────────────────────┤
+│  > whoami                                            │
+│  Elder.Evil · 33 · Kharkiv, Ukraine · UTC+3          │
+│                                                      │
+│  > pwd                                               │
+│  /home/elder                                         │
+│                                                      │
+│  > ls ~/skills/                                      │
+│  Python  FastAPI  Pytest  Wagtail  Django  Docker    │
+│  Kubernetes  Shell  Bazzite  k3s  Ansible            │
+│                                                      │
+│  > cat ~/interests.txt                               │
+│  Python projects · self-hosting · homelab            │
+│  automation · k3s · immutable Linux                  │
+│                                                      │
+│  > gh stats                                          │
+│  repos: {repos:<3}  prs: {prs:<3}  issues: {issues:<3}            │
+│  followers: {followers:<3}  github since: {since} years          │
+╰──────────────────────────────────────────────────────╯
+\x60\x60\x60"""
 
-<div align="center">
+
+def build_contribution_section():
+    return f"""<div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={GITHUB_USER}&theme=github_dark" alt="Contribution Graph" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user={GITHUB_USER}&theme=github_dark&hide_border=true" alt="GitHub Streak" />
-</div>
-"""
+</div>"""
 
 
 def build_footer():
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return f"""---
-
-<details>
-<summary><b>Activity Graph</b></summary>
-<br/>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username={GITHUB_USER}&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" />
-</details>
-
 <div align="center">
-  <sub>Last updated: {now}</sub>
-</div>
-"""
+  <sub><code>~ $ _</code> · last updated: {now}</sub>
+</div>"""
 
 
 def main():
     print("[info] Fetching GitHub data...")
+    stats = fetch_user_stats()
     repos = fetch_github_repos()
 
     sections = [
-        HEADER,
-        ABOUT_SECTION,
-        build_stats_section(),
-        build_repos_section(repos),
+        f'<div align="center">{build_matrix_rain()}</div>',
+        build_terminal_section(stats),
+        build_contribution_section(),
         build_footer(),
     ]
 

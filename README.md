@@ -1,57 +1,37 @@
-<div align="center">
-  <a href="https://evillab.tech">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Elder.Evil;Python+Developer;FastAPI+%26+Pytest+Learner;Homelab+Enthusiast;blog.evillab.tech" alt="Typing SVG" />
-  </a>
-  <br/>
-  <a href="https://evillab.tech"><sup>evillab.tech</sup></a>
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-</div>
+<div align="center"><svg xmlns="http://www.w3.org/2000/svg" width="800" height="80" viewBox="0 0 800 80">
+  <rect width="800" height="80" fill="#0d1117"/>
+  <text x="664" y="-6" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-6;100" dur="2.1s" begin="1.4s" repeatCount="indefinite"/>ク</text><text x="114" y="-97" fill="#ff0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-97;100" dur="3.9s" begin="2.7s" repeatCount="indefinite"/>ワ</text><text x="105" y="-47" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-47;100" dur="2.6s" begin="3.0s" repeatCount="indefinite"/>セ</text><text x="235" y="-80" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-80;100" dur="3.5s" begin="4.0s" repeatCount="indefinite"/>ヘ</text><text x="724" y="-87" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-87;100" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>フ</text><text x="104" y="-7" fill="#ff0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-7;100" dur="2.2s" begin="4.2s" repeatCount="indefinite"/>ノ</text><text x="480" y="-63" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-63;100" dur="2.3s" begin="4.6s" repeatCount="indefinite"/>モ</text><text x="653" y="-92" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-92;100" dur="4.2s" begin="1.8s" repeatCount="indefinite"/>リ</text><text x="56" y="-71" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-71;100" dur="2.6s" begin="1.4s" repeatCount="indefinite"/>ロ</text><text x="113" y="-55" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-55;100" dur="2.7s" begin="3.2s" repeatCount="indefinite"/>ノ</text><text x="224" y="-19" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-19;100" dur="2.7s" begin="4.7s" repeatCount="indefinite"/>ロ</text><text x="185" y="-72" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-72;100" dur="3.8s" begin="0.8s" repeatCount="indefinite"/>モ</text><text x="711" y="-96" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-96;100" dur="4.1s" begin="3.9s" repeatCount="indefinite"/>ナ</text><text x="333" y="-73" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-73;100" dur="2.7s" begin="1.1s" repeatCount="indefinite"/>ハ</text><text x="681" y="-83" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-83;100" dur="3.0s" begin="4.6s" repeatCount="indefinite"/>ミ</text><text x="262" y="-49" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-49;100" dur="3.4s" begin="1.3s" repeatCount="indefinite"/>1</text><text x="380" y="-86" fill="#ff0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-86;100" dur="4.5s" begin="0.7s" repeatCount="indefinite"/>ソ</text><text x="166" y="-52" fill="#ff3333" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-52;100" dur="2.4s" begin="3.4s" repeatCount="indefinite"/>ル</text><text x="620" y="-13" fill="#ff0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-13;100" dur="3.3s" begin="4.9s" repeatCount="indefinite"/>ホ</text><text x="748" y="-86" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-86;100" dur="3.7s" begin="2.7s" repeatCount="indefinite"/>ク</text><text x="310" y="-36" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-36;100" dur="2.4s" begin="0.0s" repeatCount="indefinite"/>フ</text><text x="790" y="-23" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-23;100" dur="3.3s" begin="0.5s" repeatCount="indefinite"/>シ</text><text x="213" y="-100" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-100;100" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>コ</text><text x="623" y="-70" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-70;100" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>ナ</text><text x="69" y="-38" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-38;100" dur="4.2s" begin="4.7s" repeatCount="indefinite"/>タ</text><text x="80" y="-79" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-79;100" dur="3.3s" begin="0.6s" repeatCount="indefinite"/>2</text><text x="281" y="-31" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-31;100" dur="4.2s" begin="2.1s" repeatCount="indefinite"/>メ</text><text x="783" y="-44" fill="#990000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-44;100" dur="3.7s" begin="3.6s" repeatCount="indefinite"/>0</text><text x="539" y="-30" fill="#ff6666" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-30;100" dur="2.3s" begin="1.1s" repeatCount="indefinite"/>ヘ</text><text x="245" y="-92" fill="#cc0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-92;100" dur="2.6s" begin="0.4s" repeatCount="indefinite"/>ヨ</text><text x="42" y="-73" fill="#ff3333" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-73;100" dur="2.8s" begin="2.6s" repeatCount="indefinite"/>9</text><text x="562" y="-40" fill="#cc0000" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-40;100" dur="3.8s" begin="4.4s" repeatCount="indefinite"/>ケ</text><text x="426" y="-41" fill="#ff3333" font-weight="normal" font-size="13" font-family="monospace"><animate attributeName="y" values="-41;100" dur="2.2s" begin="3.3s" repeatCount="indefinite"/>ス</text><text x="756" y="-49" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-49;100" dur="3.7s" begin="4.9s" repeatCount="indefinite"/>エ</text><text x="755" y="-32" fill="#ff2222" font-weight="bold" font-size="13" font-family="monospace"><animate attributeName="y" values="-32;100" dur="4.0s" begin="0.5s" repeatCount="indefinite"/>ニ</text>
+</svg></div>
 
-
-
-```yaml
-location: Kharkiv, Ukraine
-timezone: UTC+3
-learning: FastAPI, Pytest, Wagtail
-interests: Python, self-hosting, homelab, k3s, automation
-site: https://evillab.tech
 ```
-
-
-## GitHub Analytics
-
-<div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
-</div>
+╭──────────────────────────────────────────────────────╮
+│  ELDEREVIL@evillab.tech                    2026-05-26  │
+├──────────────────────────────────────────────────────┤
+│  > whoami                                            │
+│  Elder.Evil · 33 · Kharkiv, Ukraine · UTC+3          │
+│                                                      │
+│  > pwd                                               │
+│  /home/elder                                         │
+│                                                      │
+│  > ls ~/skills/                                      │
+│  Python  FastAPI  Pytest  Wagtail  Django  Docker    │
+│  Kubernetes  Shell  Bazzite  k3s  Ansible            │
+│                                                      │
+│  > cat ~/interests.txt                               │
+│  Python projects · self-hosting · homelab            │
+│  automation · k3s · immutable Linux                  │
+│                                                      │
+│  > gh stats                                          │
+│  repos: 18   prs: 0    issues: 0              │
+│  followers: 7    github since: 10 years          │
+╰──────────────────────────────────────────────────────╯
+```
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Contribution Graph" />
 </div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
-</div>
-
-
-## Popular Repositories
-
-- [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
-
-
 ---
-
-<details>
-<summary><b>Activity Graph</b></summary>
-<br/>
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ElderEvil&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" />
-</details>
-
 <div align="center">
-  <sub>Last updated: 2026-05-26 20:43 UTC</sub>
+  <sub><code>~ $ _</code> · last updated: 2026-05-26 20:55 UTC</sub>
 </div>
