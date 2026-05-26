@@ -22,7 +22,7 @@
 │  automation · k3s · immutable Linux                  │
 │                                                      │
 │  > gh stats                                          │
-│  repos: 18   prs: 0    issues: 0              │
+│  repos: 18   prs: 179  issues: 3              │
 │  followers: 7    github since: 10 years          │
 ╰──────────────────────────────────────────────────────╯
 ```
@@ -33,5 +33,5 @@
 
 ---
 <div align="center">
-  <sub><code>~ $ _</code> · last updated: 2026-05-26 20:55 UTC</sub>
+  <sub><code>~ $ _</code> · last updated: 2026-05-26 20:56 UTC</sub>
 </div>
