@@ -27,16 +27,14 @@ site: https://evillab.tech
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ElderEvil&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ElderEvil&layout=compact&theme=github_dark&hide_border=true&langs_count=8" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ElderEvil&theme=github_dark" alt="Languages by Repo" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ElderEvil&theme=github_dark" alt="Languages by Commit" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Profile Details" />
 </div>
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
-</div>
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ElderEvil&theme=onedark&no-frame=true&row=1&column=6" alt="GitHub Trophies" />
 </div>
 
 
@@ -56,5 +54,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-05-26 20:33 UTC</sub>
+  <sub>Last updated: 2026-05-26 20:36 UTC</sub>
 </div>
