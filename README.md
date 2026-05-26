@@ -26,11 +26,17 @@ site: https://evillab.tech
 
 ## GitHub Analytics
 
-![GitHub profile summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark)
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
+</div>
 
-| Overview | Activity |
-| --- | --- |
-| ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark) | ![Productive time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ElderEvil&theme=github_dark&utcOffset=3) |
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Contribution Graph" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
+</div>
 
 
 ## Popular Repositories
@@ -47,5 +53,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-05-26 21:10 UTC</sub>
+  <sub>Last updated: 2026-05-26 21:13 UTC</sub>
 </div>
