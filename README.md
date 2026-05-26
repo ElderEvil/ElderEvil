@@ -1,31 +1,58 @@
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="780" height="90" viewBox="0 0 780 90">
-  <rect width="780" height="90" fill="#0d1117" rx="6"/>
-  <text x="20" y="57" fill="#ff2222" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">ツ</text><text x="20" y="41" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ケ</text><text x="20" y="89" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ワ</text><text x="68" y="12" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">イ</text><text x="68" y="31" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ソ</text><text x="68" y="74" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ヤ</text><text x="116" y="24" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">ヘ</text><text x="116" y="63" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">5</text><text x="116" y="97" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">2</text><text x="116" y="109" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ヲ</text><text x="164" y="27" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">コ</text><text x="164" y="39" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">キ</text><text x="164" y="47" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">キ</text><text x="164" y="80" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ラ</text><text x="164" y="90" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">0</text><text x="164" y="119" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.1">D</text><text x="212" y="45" fill="#ff2222" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">テ</text><text x="212" y="79" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ユ</text><text x="212" y="54" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ウ</text><text x="212" y="100" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">3</text><text x="212" y="92" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">8</text><text x="212" y="104" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.1">ノ</text><text x="260" y="50" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">7</text><text x="260" y="49" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ネ</text><text x="260" y="64" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ロ</text><text x="260" y="75" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ラ</text><text x="260" y="114" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">モ</text><text x="308" y="39" fill="#ff2222" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">ノ</text><text x="308" y="43" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ワ</text><text x="308" y="62" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ソ</text><text x="308" y="110" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">5</text><text x="356" y="27" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">オ</text><text x="356" y="39" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">セ</text><text x="356" y="83" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ハ</text><text x="356" y="114" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">コ</text><text x="356" y="90" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">タ</text><text x="404" y="67" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">ヨ</text><text x="404" y="51" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ソ</text><text x="404" y="50" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">カ</text><text x="404" y="106" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">9</text><text x="404" y="81" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">ル</text><text x="452" y="48" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">オ</text><text x="452" y="50" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ラ</text><text x="452" y="71" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ヤ</text><text x="452" y="113" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ワ</text><text x="500" y="59" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">レ</text><text x="500" y="47" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">テ</text><text x="500" y="69" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ホ</text><text x="548" y="42" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">2</text><text x="548" y="37" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">9</text><text x="548" y="82" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">7</text><text x="596" y="33" fill="#ff2222" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">2</text><text x="596" y="36" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">ラ</text><text x="596" y="62" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">イ</text><text x="596" y="65" fill="#660000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">A</text><text x="644" y="13" fill="#ff2222" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">タ</text><text x="644" y="82" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">カ</text><text x="644" y="88" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">6</text><text x="644" y="62" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ケ</text><text x="644" y="116" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">E</text><text x="692" y="43" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">9</text><text x="692" y="64" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">F</text><text x="692" y="55" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ン</text><text x="692" y="77" fill="#330000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ロ</text><text x="740" y="67" fill="#ff0000" font-weight="bold" font-size="14" font-family="monospace" opacity="1.0">メ</text><text x="740" y="54" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.8">タ</text><text x="740" y="56" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.6">ニ</text><text x="740" y="59" fill="#990000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.4">ヨ</text><text x="740" y="88" fill="#cc0000" font-weight="normal" font-size="14" font-family="monospace" opacity="0.2">オ</text>
-</svg>
+  <a href="https://evillab.tech">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Elder.Evil;Python+Developer;FastAPI+%26+Pytest+Learner;Homelab+Enthusiast;blog.evillab.tech" alt="Typing SVG" />
+  </a>
+  <br/>
+  <a href="https://evillab.tech"><sup>evillab.tech</sup></a>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </div>
 
+
+
+```yaml
+location: Kharkiv, Ukraine
+timezone: UTC+3
+learning: FastAPI, Pytest, Wagtail
+interests: Python, self-hosting, homelab, k3s, automation
+site: https://evillab.tech
 ```
- ┌───────────────────────────────────────────────────┐
- │ elderevil@evillab.tech                            │
- ├───────────────────────────────────────────────────┤
- │  OS       Bazzite Linux 41 (x86_64)               │
- │  Location Kharkiv, Ukraine                        │
- │  Timezone UTC+3                                   │
- │  Skills   Python  FastAPI  Pytest                 │
- │           Wagtail  Django  Docker  K8s            │
- │  Blog     evillab.tech                            │
- ├───────────────────────────────────────────────────┤
- │ GitHub Stats                                      │
- │ ───────────────────────────────────────────────   │
- │  repos 18    PRs 179   issues 3                   │
- │  stars 0     since 10 years   followers 7         │
- └───────────────────────────────────────────────────┘
-```
+
+
+
+## GitHub Analytics
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ElderEvil&theme=github_dark" alt="Stats" />
+</div>
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ElderEvil&theme=github_dark" alt="Contribution Graph" />
 </div>
 
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ElderEvil&theme=github_dark&hide_border=true" alt="GitHub Streak" />
+</div>
+
+
+## Popular Repositories
+
+- [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
+
+
 ---
-<p align="center"><sub><code>~ $ _</code> · 2026-05-26 21:03 UTC</sub></p>
+
+<details>
+<summary><b>Activity Graph</b></summary>
+<br/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ElderEvil&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" />
+</details>
+
+<div align="center">
+  <sub>Last updated: 2026-05-26 21:04 UTC</sub>
+</div>
