@@ -14,6 +14,7 @@
 </div>
 
 
+
 ```yaml
 location: Kharkiv, Ukraine
 timezone: UTC+3
@@ -39,6 +40,13 @@ site: https://evillab.tech
 </div>
 
 
+## Popular Repositories
+
+<div align="center">
+<a href="https://github.com/ElderEvil/fastapi-quickstart"><img src="https://github-readme-stats.vercel.app/api/pin/?username=ElderEvil&repo=fastapi-quickstart&theme=github_dark&hide_border=true" alt="fastapi-quickstart" /></a>
+</div>
+
+
 ---
 
 <details>
@@ -48,5 +56,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-05-26 23:30 UTC</sub>
+  <sub>Last updated: 2026-05-26 20:31 UTC</sub>
 </div>
