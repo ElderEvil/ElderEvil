@@ -12,49 +12,45 @@ from pathlib import Path
 
 GITHUB_USER = "ElderEvil"
 README_PATH = Path(__file__).resolve().parent.parent / "README.md"
+OUTER = 54  # total line width including box borders
+# format: " │<INNER content> │"  →  prefix 3 + content + suffix 2 = OUTER
+INNER = OUTER - 5  # 49 chars between the │ symbols
 
-MATRIX_CHARS = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF"
-MATRIX_COLORS = ["#ff0000", "#cc0000", "#990000", "#ff3333", "#ff6666"]
 
-
-def build_matrix_rain():
+def build_matrix_banner():
     rng = random.Random(42)
-    count = 35
-    width = 800
-    height = 80
-    drops = []
+    chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF"
+    streaks = []
 
-    for i in range(count):
-        x = rng.randint(10, width - 10)
-        ch = rng.choice(MATRIX_CHARS)
-        dur = round(rng.uniform(2.0, 4.5), 1)
-        delay = round(rng.uniform(0, 5.0), 1)
-        is_head = rng.random() < 0.25
-        color = "#ff2222" if is_head else rng.choice(MATRIX_COLORS)
-        weight = "bold" if is_head else "normal"
-        start_y = rng.randint(-height - 20, -5)
-        drops.append(
-            f'<text x="{x}" y="{start_y}" fill="{color}"'
-            f' font-weight="{weight}" font-size="13" font-family="monospace">'
-            f'<animate attributeName="y" values="{start_y};{height + 20}"'
-            f' dur="{dur}s" begin="{delay}s" repeatCount="indefinite"/>'
-            f'{ch}</text>'
-        )
+    for col in range(16):
+        x = 20 + col * 48
+        length = rng.randint(3, 6)
+        top_bright = rng.choice(["#ff2222", "#ff0000"])
+        colors = ["#ff0000", "#cc0000", "#990000", "#660000", "#330000"]
+        for i in range(length):
+            y = rng.randint(10, 70)
+            opacity = max(0.15, 1.0 - i * 0.2)
+            color = top_bright if i == 0 else rng.choice(colors[1:])
+            ch = rng.choice(chars)
+            weight = "bold" if i == 0 else "normal"
+            streaks.append(
+                f'<text x="{x}" y="{y + i * 16}" fill="{color}"'
+                f' font-weight="{weight}" font-size="14" font-family="monospace"'
+                f' opacity="{opacity:.1f}">{ch}</text>'
+            )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
-  <rect width="{width}" height="{height}" fill="#0d1117"/>
-  {"".join(drops)}
-</svg>"""
+    return f"""<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="90" viewBox="0 0 780 90">
+  <rect width="780" height="90" fill="#0d1117" rx="6"/>
+  {"".join(streaks)}
+</svg>
+</div>"""
 
 
 def fetch_json(url: str, token: str | None = None) -> dict | list | None:
-    headers = {
-        "Accept": "application/json",
-        "User-Agent": "ElderEvil-profile-bot/1.0",
-    }
+    headers = {"Accept": "application/json", "User-Agent": "ElderEvil-profile-bot/1.0"}
     if token:
         headers["Authorization"] = f"Bearer {token.removeprefix('Bearer ')}"
-
     req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
@@ -76,76 +72,83 @@ def fetch_github_repos():
 
 def fetch_user_stats():
     token = os.environ.get("GITHUB_TOKEN")
-    user_url = f"https://api.github.com/users/{GITHUB_USER}"
-    user = fetch_json(user_url, token=token)
+    user = fetch_json(f"https://api.github.com/users/{GITHUB_USER}", token=token)
     if not isinstance(user, dict):
         return {}
-
-    pr_count = 0
-    issue_count = 0
+    pr_count = issue_count = 0
     if token:
-        pr_data = fetch_json(
-            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:pr&per_page=1",
-            token=token,
+        pr = fetch_json(
+            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:pr&per_page=1", token=token
         )
-        if isinstance(pr_data, dict):
-            pr_count = pr_data.get("total_count", 0)
-
-        issue_data = fetch_json(
-            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:issue&per_page=1",
-            token=token,
+        if isinstance(pr, dict):
+            pr_count = pr.get("total_count", 0)
+        iss = fetch_json(
+            f"https://api.github.com/search/issues?q=author:{GITHUB_USER}+type:issue&per_page=1", token=token
         )
-        if isinstance(issue_data, dict):
-            issue_count = issue_data.get("total_count", 0)
-
+        if isinstance(iss, dict):
+            issue_count = iss.get("total_count", 0)
     return {
         "public_repos": user.get("public_repos", 0),
         "followers": user.get("followers", 0),
-        "following": user.get("following", 0),
         "created_at": user.get("created_at", ""),
         "pr_count": pr_count,
         "issue_count": issue_count,
     }
 
 
-def build_terminal_section(stats: dict):
+def pad(s: str, w: int) -> str:
+    """Left-align string s in field of width w."""
+    s = str(s)
+    return s + " " * (w - len(s))
+
+
+def build_fastfetch(stats: dict):
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M")
-    years_active = ""
+    years = ""
     if stats.get("created_at"):
         joined = datetime.datetime.fromisoformat(stats["created_at"].replace("Z", "+00:00"))
-        years_active = str((datetime.datetime.now(datetime.timezone.utc) - joined).days // 365)
+        years = str((datetime.datetime.now(datetime.timezone.utc) - joined).days // 365)
 
     repos = stats.get("public_repos", "?")
     prs = stats.get("pr_count", "?")
     issues = stats.get("issue_count", "?")
     followers = stats.get("followers", "?")
-    since = years_active or "?"
-    return f"""\x60\x60\x60
-╭──────────────────────────────────────────────────────╮
-│  ELDEREVIL@evillab.tech                    {now[:10]}  │
-├──────────────────────────────────────────────────────┤
-│  > whoami                                            │
-│  Elder.Evil · 33 · Kharkiv, Ukraine · UTC+3          │
-│                                                      │
-│  > pwd                                               │
-│  /home/elder                                         │
-│                                                      │
-│  > ls ~/skills/                                      │
-│  Python  FastAPI  Pytest  Wagtail  Django  Docker    │
-│  Kubernetes  Shell  Bazzite  k3s  Ansible            │
-│                                                      │
-│  > cat ~/interests.txt                               │
-│  Python projects · self-hosting · homelab            │
-│  automation · k3s · immutable Linux                  │
-│                                                      │
-│  > gh stats                                          │
-│  repos: {repos:<3}  prs: {prs:<3}  issues: {issues:<3}            │
-│  followers: {followers:<3}  github since: {since} years          │
-╰──────────────────────────────────────────────────────╯
-\x60\x60\x60"""
+    since = years or "?"
+
+    dash = "─" * (OUTER - 3)
+    l1 = f" OS       {pad('Bazzite Linux 41 (x86_64)', 20)}"
+    l2 = f" Location {pad('Kharkiv, Ukraine', 20)}"
+    l3 = f" Timezone {pad('UTC+3', 20)}"
+    l4 = f" Skills   {pad('Python  FastAPI  Pytest', 20)}"
+    l5 = f"          {pad('Wagtail  Django  Docker  K8s', 20)}"
+    l6 = f" Blog     {pad('evillab.tech', 20)}"
+
+    repo_line = f" repos {pad(repos, 3)}   PRs {pad(prs, 3)}   issues {pad(issues, 3)}"
+    stats_line = f" stars 0     since {pad(since, 2)} years   followers {pad(followers, 2)}"
+
+    box = [
+        "```",
+        f" ┌{dash}┐",
+        f" │ {pad('elderevil@evillab.tech', INNER)} │",
+        f" ├{dash}┤",
+        f" │ {pad(l1, INNER)} │",
+        f" │ {pad(l2, INNER)} │",
+        f" │ {pad(l3, INNER)} │",
+        f" │ {pad(l4, INNER)} │",
+        f" │ {pad(l5, INNER)} │",
+        f" │ {pad(l6, INNER)} │",
+        f" ├{dash}┤",
+        f" │ {pad('GitHub Stats', INNER)} │",
+        f" │ {pad('─' * (INNER - 2), INNER)} │",
+        f" │ {pad(repo_line, INNER)} │",
+        f" │ {pad(stats_line, INNER)} │",
+        f" └{dash}┘",
+        "```",
+    ]
+    return "\n".join(box)
 
 
-def build_contribution_section():
+def build_contribution():
     return f"""<div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={GITHUB_USER}&theme=github_dark" alt="Contribution Graph" />
 </div>"""
@@ -154,20 +157,17 @@ def build_contribution_section():
 def build_footer():
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     return f"""---
-<div align="center">
-  <sub><code>~ $ _</code> · last updated: {now}</sub>
-</div>"""
+<p align="center"><sub><code>~ $ _</code> · {now}</sub></p>"""
 
 
 def main():
     print("[info] Fetching GitHub data...")
     stats = fetch_user_stats()
-    repos = fetch_github_repos()
 
     sections = [
-        f'<div align="center">{build_matrix_rain()}</div>',
-        build_terminal_section(stats),
-        build_contribution_section(),
+        build_matrix_banner(),
+        build_fastfetch(stats),
+        build_contribution(),
         build_footer(),
     ]
 
