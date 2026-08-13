@@ -41,6 +41,7 @@ site: https://evillab.tech
 
 ## Popular Repositories
 
+- [bazzite-skill](https://github.com/ElderEvil/bazzite-skill) —  ⭐1
 - [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
 
 
@@ -53,5 +54,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-08-12 07:08 UTC</sub>
+  <sub>Last updated: 2026-08-13 07:12 UTC</sub>
 </div>
