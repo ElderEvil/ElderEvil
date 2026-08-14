@@ -41,6 +41,7 @@ site: https://evillab.tech
 
 ## Popular Repositories
 
+- [falloutProject](https://github.com/ElderEvil/falloutProject) — Fallout Shelter python implementation. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
 - [bazzite-skill](https://github.com/ElderEvil/bazzite-skill) —  ⭐1
 - [fastapi-quickstart](https://github.com/ElderEvil/fastapi-quickstart) — A package for rapid FastAPI development. ⭐1 ![Python](https://img.shields.io/badge/Python-lightgrey?style=flat&logo=github)
 
@@ -54,5 +55,5 @@ site: https://evillab.tech
 </details>
 
 <div align="center">
-  <sub>Last updated: 2026-08-13 07:12 UTC</sub>
+  <sub>Last updated: 2026-08-14 07:09 UTC</sub>
 </div>
